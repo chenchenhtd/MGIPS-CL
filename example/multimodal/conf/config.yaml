@@ -1,0 +1,22 @@
+# ??? is a mandatory value.
+# you should be able to set it without open_dict
+# but if you try to read it before it's set an error will get thrown.
+
+# populated at runtime
+# cwd: ???
+cwd: /home/wpf/workspace/mner-data
+use_wandb: False
+hydra:
+  run:
+    # Output directory for normal runs
+    dir: logs/${now:%Y-%m-%d_%H-%M-%S}
+
+  sweep:
+    # Output directory for sweep runs
+    dir: logs/${now:%Y-%m-%d_%H-%M-%S}
+    # Output sub directory for sweep runs.
+    subdir: ${hydra.job.num}_${hydra.job.id}
+
+defaults:
+  - train
+  - predict

@@ -1,0 +1,25 @@
+seed: 1234
+bert_name: "/home/wpf/workspace/pretrained-model/bert-base-uncased"
+vit_name: "/home/wpf/workspace/pretrained-model/clip-vit-base-patch32"
+device: cuda:0
+
+num_epochs: 40
+batch_size: 1
+lr: 5e-5
+vit_lr: 3e-5
+weight_decay: 1e-3
+hie_lr: 3e-4
+con_lr: 3e-3
+k: 1
+warmup_ratio: 0.06
+eval_begin_epoch: 1
+
+max_seq: 40
+aux_size: 128
+rcnn_size: 64
+ignore_idx: 0
+
+save_path: "checkpoints/twitter15"
+load_path: null
+
+dataset_name: 'twitter15'

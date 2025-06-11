@@ -1,0 +1,15 @@
+seed: 1234
+
+bert_name: "/home/wpf/workspace/pretrained-model/bert-base-uncased"
+vit_name: "/home/wpf/workspace/pretrained-model/clip-vit-base-patch32"
+device: cuda:0
+
+batch_size: 1 # 128
+
+max_seq: 40
+aux_size: 128
+rcnn_size: 64
+ignore_idx: 0
+
+load_path:  '/home/wpf/workspace/MGIPS-CL/example/ner/multimodal/logs/2025-03-18_14-42-13_twitter-2015/checkpoints/twitter15/best_model.pth'
+dataset_name: 'twitter15'
